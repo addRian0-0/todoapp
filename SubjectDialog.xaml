@@ -1,0 +1,34 @@
+<Window x:Class="Notitas.SubjectDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Agregar materia" Width="400" SizeToContent="Height"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        Background="{DynamicResource CardBg}" Foreground="{DynamicResource TextBrush}"
+        FontFamily="Segoe UI, Tahoma, Arial" FontSize="13">
+    <StackPanel Margin="18">
+        <TextBlock Text="Nombre" FontWeight="SemiBold" Margin="0,0,0,6"/>
+        <TextBox x:Name="NameBox" Padding="8,6" Background="{DynamicResource PanelBg}"
+                 Foreground="{DynamicResource TextBrush}" CaretBrush="{DynamicResource TextBrush}"
+                 BorderBrush="{DynamicResource AccentBrush}" BorderThickness="1"/>
+
+        <TextBlock Text="Color" FontWeight="SemiBold" Margin="0,14,0,6"/>
+        <WrapPanel x:Name="Swatches"/>
+
+        <TextBlock Text="Icono" FontWeight="SemiBold" Margin="0,10,0,6"/>
+        <WrapPanel x:Name="IconRow"/>
+
+        <DockPanel Margin="0,10,0,0">
+            <TextBlock Text="HEX" VerticalAlignment="Center" Foreground="{DynamicResource TextSecondary}" Margin="0,0,8,0"/>
+            <Border x:Name="PreviewBox" DockPanel.Dock="Right" Width="26" Height="26" CornerRadius="6" Margin="8,0,0,0"/>
+            <TextBox x:Name="HexBox" Padding="6,4" Background="{DynamicResource PanelBg}"
+                     Foreground="{DynamicResource TextBrush}" CaretBrush="{DynamicResource TextBrush}"
+                     BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1"
+                     TextChanged="HexBox_TextChanged"/>
+        </DockPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,18,0,0">
+            <Button Content="Cancelar" Style="{StaticResource FlatButton}" Click="Cancel_Click" Margin="0,0,8,0"/>
+            <Button Content="Crear" x:Name="OkButton" Style="{StaticResource AccentButton}" Click="Ok_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,20 @@
+# Compilación .NET
+bin/
+obj/
+publish/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+.vs/
+.vscode/
+.idea/
+
+# Ejecutables publicados: van en las Releases de GitHub, no en el repositorio
+*.exe
+*.pdb
+
+# Salida del modo --selftest
+selftest/
+selftest-data/
+notitas-pruebas/
